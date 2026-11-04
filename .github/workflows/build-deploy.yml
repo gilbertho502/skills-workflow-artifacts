@@ -29,12 +29,12 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      -uses: actions/download-artifact@v8
-      with:
+      - uses: actions/download-artifact@v8
+        with:
           name: octomatch
           path: website
-      -name: Deploy to Dev
-      run: |
-        echo "Downloaded artifact contents:"
-        tree website
-        echo "Demo deploy step: replace with your real deploy command."
+      - name: Deploy to Dev
+        run: |
+          echo "Downloaded artifact contents:"
+          tree website
+          echo "Demo deploy step: replace with your real deploy command."
